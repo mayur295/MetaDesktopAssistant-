@@ -12,6 +12,4 @@ provides information regarding the weather, News, it can play music, it can
 search for topics on Wikipedia, Display the current date and time, send a 
 mail. It reduces both man power and time. Due to support of NLP (Neuro-
 Linguistic Programming,) user can ask queries in very formal way. No 
-need ask to queries in very strict and specific way. The user should be 
-aware of general rules of English Language. The goal is to provide people a 
-quick and easy way to have their questions answered. 
+need ask to queries in very strict and specific way.  
