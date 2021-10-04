@@ -15,6 +15,7 @@ import wikipedia
 import webbrowser
 import os
 import smtplib
+import pyautogui
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')  #to get the voice details  
@@ -24,6 +25,10 @@ engine.setProperty('voice',voices[1].id)
 def speak(audio): 
     engine.say(audio)
     engine.runAndWait() #Without this command, speech will not be audible to us.
+    
+def screenshot():
+    pic=pyautogui.screenshot()
+    pic.save('c:/User')
 
 def wishMe():
     hour = int(datetime.datetime.now().hour)
@@ -98,8 +103,24 @@ if __name__ == "__main__" :
         
         elif "open google" in query:
             webbrowser.open("google.com")
+            
+         elif 'open Linkedin' in query:
+            webbrowser.open("Linkedin.com")
 
-        
+        elif 'open instagram' in query:
+            webbrowser.open("instagram.com")
+
+        elif 'open whatsapp' in query:
+            webbrowser.open("https://web.whatsapp.com/")
+
+        # this will exit and terminate the program
+        elif "bye" in query:
+            speak("Bye. Have A Good Day")
+            exit()
+            
+            
+        elif 'screenshot' in query:
+            screenshot()
         #Know time by using datetime() function and storing the current
         #or live system into a variable called strTime.
         elif 'the time' in query:
@@ -123,3 +144,6 @@ if __name__ == "__main__" :
             except Exception as e:
                 print(e)
                 speak("Sorry, I am not able to send this email")
+                
+                
+     
